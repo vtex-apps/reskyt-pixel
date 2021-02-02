@@ -141,28 +141,7 @@ export const reskytHtml = ({
       url = window.location.href
       if (url.indexOf('customapp=') != -1) {
         setCookie('is_app_install_bar', 1, 365)
-      }
-
-      window.onload = function () {
-        isMobile = true
-        if (/Android/i.test(navigator.userAgent)) {
-          document.getElementById('platform-app').innerHTML = 'Google Play'
-        } else if (/iPhone|iPad|iPod/i.test(navigator.userAgent)) {
-          document.getElementById('platform-app').innerHTML = 'App Store'
-        } else if (/IEMobile/i.test(navigator.userAgent)) {
-          document.getElementById('platform-app').innerHTML = 'Windows Phone'
-        } else {
-          isMobile = false
-        }
-
-        if (
-          isMobile &&
-          !getCookie('is_app_install_bar') &&
-          document.getElementById('href-download-app') &&
-          !getCookie('reskyt-install-app')
-        ) {
-          document.getElementById('href-download-app').style.display = 'block'
-        }
+        document.getElementById('href-download-app').style.display = 'none'
       }
     </script>
   </head>
