@@ -1,5 +1,5 @@
 {
-  "name": "YOURAPPNAME",
+  "name": "reskyt-pixel",
   "vendor": "vtex",
   "version": "0.0.1",
   "title": "CHANGEME",
@@ -11,9 +11,7 @@
     },
     "free": true,
     "type": "free",
-    "availableCountries": [
-      "*"
-    ]
+    "availableCountries": ["*"]
   },
   "builders": {
     "react": "3.x",
