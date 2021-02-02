@@ -11,14 +11,22 @@ export function handleEvents(e: PixelMessage) {
       const mobileUserAgentLabel = getMobileUserAgent(navigator.userAgent)
 
       if (mobileUserAgentLabel) {
+        const {
+          reskytAppName,
+          reskytFabName,
+          reskytHtmlTitle,
+          reskytDownloadLink,
+          reskytAppImage,
+          reskytAppImageAlt,
+        } = window.__reskytSettings
+
         const appConfig = {
-          htmlTitle: 'Barra de descarga de la App',
-          downloadLink: 'http://reskyt.com/app/arcaplanet',
-          appImage:
-            'https://reskytnew.s3.amazonaws.com/6367/arcaplanet-icono-app-312229-210119090817.png',
-          appImageAlt: 'Arcaplanet Logo',
-          appName: 'Arcaplanet - Pet store online',
-          fabName: 'Agrifarma SPA',
+          htmlTitle: decodeURIComponent(reskytHtmlTitle),
+          downloadLink: decodeURIComponent(reskytDownloadLink),
+          appImage: decodeURIComponent(reskytAppImage),
+          appImageAlt: decodeURIComponent(reskytAppImageAlt),
+          appName: decodeURIComponent(reskytAppName),
+          fabName: decodeURIComponent(reskytFabName),
           appTittle: 'APP GRATIS - En',
         }
 
