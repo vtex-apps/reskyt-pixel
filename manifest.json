@@ -2,8 +2,8 @@
   "name": "reskyt-pixel",
   "vendor": "vtex",
   "version": "0.0.1",
-  "title": "CHANGEME",
-  "description": "CHANGEME",
+  "title": "Reskyt Pixel",
+  "description": "Reskyt Pixel creates a banner with a link to the app store",
   "billingOptions": {
     "termsURL": "https://compliance.vtex.com/gdpr/policies/vtex-privacy-policy",
     "support": {
@@ -23,12 +23,37 @@
     "vtex.pixel-interfaces": "1.x"
   },
   "settingsSchema": {
-    "title": "YOUR APP NAME",
+    "title": "Reskyt Pixel",
     "type": "object",
     "properties": {
-      "gtmId": {
-        "title": "SAMPLE FIELD",
-        "description": "Enter the ID (GTM-XXXX) from your Google Tag Manager",
+      "appName": {
+        "title": "App Name",
+        "description": "App name",
+        "type": "string"
+      },
+      "fabName": {
+        "title": "Developer name",
+        "description": "Developer name",
+        "type": "string"
+      },
+      "htmlTitle": {
+        "title": "HTML Title Name",
+        "description": "The HTML title for the pixel",
+        "type": "string"
+      },
+      "downloadLink": {
+        "title": "App download link",
+        "description": "Link to app store",
+        "type": "string"
+      },
+      "appImage": {
+        "title": "App image",
+        "description": "Store app image",
+        "type": "string"
+      },
+      "appImageAlt": {
+        "title": "Image alt",
+        "description": "Image alternative text",
         "type": "string"
       }
     }
