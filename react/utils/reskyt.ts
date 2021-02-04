@@ -164,7 +164,7 @@ export const reskytHtml = ({
             ${appTittle} <span id="platform-app"></span>
           </div>
         </div>
-        <span class="view-install-app">Ver</span>
+        <span class="view-install-app">Scarica</span>
       </div>
     </a>
   </body>

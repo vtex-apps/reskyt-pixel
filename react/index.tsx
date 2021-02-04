@@ -20,6 +20,7 @@ export function handleEvents(e: PixelMessage) {
           reskytAppImageAlt,
         } = window.__reskytSettings
 
+
         const appConfig = {
           htmlTitle: decodeURIComponent(reskytHtmlTitle),
           downloadLink: decodeURIComponent(reskytDownloadLink),
@@ -27,7 +28,7 @@ export function handleEvents(e: PixelMessage) {
           appImageAlt: decodeURIComponent(reskytAppImageAlt),
           appName: decodeURIComponent(reskytAppName),
           fabName: decodeURIComponent(reskytFabName),
-          appTittle: 'APP GRATIS - En',
+          appTittle: "APP GRATUITA - Nel App Store"
         }
 
         const resky = reskytHtml(appConfig)
