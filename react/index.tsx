@@ -4,13 +4,18 @@ import { reskytHtml } from './utils/reskyt'
 import type { PixelMessage } from './typings/events'
 import { getMobileUserAgent } from './utils/getMobileUserAgent'
 import { getCookies } from './utils/getCookies'
+import { checkConfiguration } from './utils/checkConfiguration'
 
 export function handleEvents(e: PixelMessage) {
   switch (e.data.eventName) {
     case 'vtex:pageView': {
       const mobileUserAgentLabel = getMobileUserAgent(navigator.userAgent)
 
-      if (mobileUserAgentLabel) {
+      const hasConfig = checkConfiguration(window.__reskytSettings)
+
+      if (!hasConfig) {
+        console.error('Please configure Reskyt App settings')
+      } else if (mobileUserAgentLabel) {
         const {
           reskytAppName,
           reskytFabName,
@@ -20,7 +25,6 @@ export function handleEvents(e: PixelMessage) {
           reskytAppImageAlt,
         } = window.__reskytSettings
 
-
         const appConfig = {
           htmlTitle: decodeURIComponent(reskytHtmlTitle),
           downloadLink: decodeURIComponent(reskytDownloadLink),
@@ -28,7 +32,7 @@ export function handleEvents(e: PixelMessage) {
           appImageAlt: decodeURIComponent(reskytAppImageAlt),
           appName: decodeURIComponent(reskytAppName),
           fabName: decodeURIComponent(reskytFabName),
-          appTittle: "APP GRATUITA - Nel App Store"
+          appTittle: 'APP GRATUITA - ',
         }
 
         const resky = reskytHtml(appConfig)
