@@ -1,6 +1,6 @@
 {
   "name": "reskyt-pixel",
-  "vendor": "vtexeurope",
+  "vendor": "vtex",
   "version": "0.0.2",
   "title": "Reskyt Pixel",
   "description": "Reskyt Pixel creates a banner with a link to the app store",
@@ -11,9 +11,7 @@
     },
     "free": true,
     "type": "free",
-    "availableCountries": [
-      "*"
-    ]
+    "availableCountries": ["*"]
   },
   "builders": {
     "react": "3.x",
