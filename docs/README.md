@@ -1,7 +1,8 @@
 # Reskyt Pixel
 
-### How to install
+This pixel renders a banner with information about a downloadable app
 
-Open the VTEX App Store and install this app on your store.
+### How to use it
 
-Now, open the app settings on your admin and fill in the Reskyt options.
+- Open the VTEX App Store and install this app on your store.
+- Now, open the app settings on your admin and fill in the Extension options.

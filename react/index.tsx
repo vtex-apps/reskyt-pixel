@@ -1,5 +1,4 @@
 import { canUseDOM } from 'vtex.render-runtime'
-
 import { reskytHtml } from './utils/reskyt'
 import type { PixelMessage } from './typings/events'
 import { getMobileUserAgent } from './utils/getMobileUserAgent'
@@ -23,6 +22,8 @@ export function handleEvents(e: PixelMessage) {
           reskytDownloadLink,
           reskytAppImage,
           reskytAppImageAlt,
+          reskytStorePrefix,
+          reskytDownloadCTA
         } = window.__reskytSettings
 
         const appConfig = {
@@ -32,7 +33,8 @@ export function handleEvents(e: PixelMessage) {
           appImageAlt: decodeURIComponent(reskytAppImageAlt),
           appName: decodeURIComponent(reskytAppName),
           fabName: decodeURIComponent(reskytFabName),
-          appTittle: 'APP GRATUITA - ',
+          storePrefix: decodeURIComponent(reskytStorePrefix),
+          downloadCTA: decodeURIComponent(reskytDownloadCTA)
         }
 
         const resky = reskytHtml(appConfig)

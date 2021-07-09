@@ -1,7 +1,7 @@
 {
   "name": "reskyt-pixel",
-  "vendor": "vtex",
-  "version": "0.0.2",
+  "vendor": "vtexeurope",
+  "version": "0.0.3",
   "title": "Reskyt Pixel",
   "description": "Reskyt Pixel creates a banner with a link to the app store",
   "billingOptions": {
@@ -11,7 +11,9 @@
     },
     "free": true,
     "type": "free",
-    "availableCountries": ["*"]
+    "availableCountries": [
+      "*"
+    ]
   },
   "builders": {
     "react": "3.x",
@@ -24,36 +26,47 @@
   },
   "settingsSchema": {
     "title": "Reskyt Pixel",
+    "bindingBounded": true,
     "type": "object",
     "properties": {
+      "htmlTitle": {
+        "title": "HTML title name",
+        "description": "The HTML title for the pixel",
+        "type": "string"
+      },
       "appName": {
         "title": "App Name",
-        "description": "App name",
+        "description": "Name of the app that the user will download",
         "type": "string"
       },
       "fabName": {
         "title": "Developer name",
-        "description": "Developer name",
-        "type": "string"
-      },
-      "htmlTitle": {
-        "title": "HTML Title Name",
-        "description": "The HTML title for the pixel",
+        "description": "Name of the developer of the app",
         "type": "string"
       },
       "downloadLink": {
         "title": "App download link",
-        "description": "Link to app store",
+        "description": "Link to store where the app is hosted",
         "type": "string"
       },
       "appImage": {
         "title": "App image",
-        "description": "Store app image",
+        "description": "Image of the app that will be shown in the banner",
         "type": "string"
       },
       "appImageAlt": {
         "title": "Image alt",
-        "description": "Image alternative text",
+        "description": "Image alternative text, for accesibility purposes",
+        "type": "string"
+      },
+      "storePrefix": {
+        "title": "Store name prefix",
+        "description": "A prefix to the store where the application is hosted. i.e 'Free on'",
+        "type": "string"
+      },
+      "downloadCTA": {
+        "title": "Download CTA",
+        "description": "Download link call to action",
         "type": "string"
       }
     }

@@ -8,7 +8,8 @@ interface AppConfig {
   appImageAlt: string
   appName: string
   fabName: string
-  appTittle: string
+  storePrefix: string
+  downloadCTA: string
 }
 
 export const reskytHtml = ({
@@ -18,7 +19,8 @@ export const reskytHtml = ({
   appImageAlt,
   appName,
   fabName,
-  appTittle,
+  storePrefix,
+  downloadCTA
 }: AppConfig) => html`<html>
   <head>
     <title>${htmlTitle}</title>
@@ -98,7 +100,7 @@ export const reskytHtml = ({
         margin-top: 23px;
         text-transform: uppercase;
         position: absolute;
-        right: 5px;
+        right: 7px;
       }
     </style>
     <script>
@@ -161,10 +163,10 @@ export const reskytHtml = ({
           <div class="name-app">${appName}</div>
           <div class="fab-app">${fabName}</div>
           <div class="title-app">
-            ${appTittle} <span id="platform-app"></span>
+            ${storePrefix} <span id="platform-app"></span>
           </div>
         </div>
-        <span class="view-install-app">Scarica</span>
+        <span class="view-install-app">${downloadCTA}</span>
       </div>
     </a>
   </body>

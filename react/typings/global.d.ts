@@ -7,5 +7,7 @@ interface Window extends Window {
     reskytDownloadLink: string
     reskytAppImage: string
     reskytAppImageAlt: string
+    reskytStorePrefix: string
+    reskytDownloadCTA: string
   }
 }
